@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 
+[System.Serializable]
 public class Item
 {
-    public Sprite DisplaySprite;
     public string Name;
+    public Sprite DisplaySprite;
 }
