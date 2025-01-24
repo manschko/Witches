@@ -6,11 +6,11 @@ public class Pot : MonoBehaviour
     public static UnityEvent<Bubble> OnBubbleSpawned = new UnityEvent<Bubble>();
     public float SpawnTimer = 1f;
     public GameObject PotPrefab;
+    public BoxCollider2D SpawnArea;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
         _spawnDelay = SpawnTimer;
     }
 
@@ -30,6 +30,15 @@ public class Pot : MonoBehaviour
     public void SpawnBubble()
     {
         var instance = Instantiate(PotPrefab);
+        instance.transform.position = GetRandomSpawnLocation();
         OnBubbleSpawned.Invoke(instance.GetComponent<Bubble>());
+    }
+
+    private Vector2 GetRandomSpawnLocation()
+    {
+        var bounds = SpawnArea.bounds;
+        return new Vector2(
+            Random.Range(bounds.min.x, bounds.max.x),
+            Random.Range(bounds.min.y, bounds.max.y));
     }
 }
