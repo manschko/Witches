@@ -7,6 +7,7 @@ public class Bubble : MonoBehaviour
 {
     public Item ContainedItem;
     public UnityEvent OnPopped = new UnityEvent();
+    public UnityEvent OnDestroy = new UnityEvent();
     public SpriteRenderer Renderer;
     public SpriteRenderer ItemRenderer;
     public CinemachineImpulseSource Impulse;
@@ -18,7 +19,7 @@ public class Bubble : MonoBehaviour
     public GameObject PopParticlePrefab;
     public AudioClip PopSound;
     public float PopSoundVolume = 1f;
-    public float ItemScale = .8f;
+    public float ItemScale = .6f;
 
     private float _aliveTime;
     private float _x, _y;
@@ -52,11 +53,12 @@ public class Bubble : MonoBehaviour
         //pos.x += ((Wind.CurrentWindDirection - 0.5f) * 2) * Wind.CurrentWindStrength * Time.deltaTime * _aliveTime;
         transform.position = pos;
 
-        /*if (!Renderer.isVisible)
+        if (!Renderer.isVisible)
         {
             Pot.AllBubbles.Remove(this);
+            OnDestroy.Invoke();
             Destroy(gameObject);
-        }*/
+        }
 
         if(IsBeingClicked()) Pop(false);
 
