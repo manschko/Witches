@@ -33,8 +33,8 @@ public class ItemManager : MonoBehaviour
     private void tryToAddItemToBubble(Bubble bubble)
     {
         int itemCount = itemList.Count;
-        if(popCount >= nextDrop && itemCount > 0){
-            //next dropt calc
+        if(nextDrop <= 0 && itemCount > 0){
+            calcNextDrop();
             int i = Random.Range(1,itemCount);
             Item item = itemList[i-1];
             bubble.addItem(item);
@@ -42,15 +42,20 @@ public class ItemManager : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void calcNextDrop()
     {
+        if(popCount < 7){
+            nextDrop = Random.Range(popCount, popCount + diviation);
+        }
+
+        nextDrop = Random.Range(10-diviation, 10 + diviation);
     }
 
     private void spawnItem(Bubble bubble)
     {
-        popCount++;
+        nextDrop--;
     
-        Debug.Log("popCount:" + popCount);
+        Debug.Log("next Drop in: " + nextDrop);
 
         if(!bubble.ContainedItem){
             return;
