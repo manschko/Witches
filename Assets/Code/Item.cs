@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
@@ -10,10 +11,10 @@ public class Item : MonoBehaviour
     public float snapThresholdScale = 2.0f;
 
     public Vector3 size = new Vector3(10,10,0);
+    public SpriteRenderer spriteRenderer;
 
 
     private Rigidbody2D rb;
-    private SpriteRenderer sr;
     private CircleCollider2D colider;
     private Camera mainCamera;
 
@@ -21,18 +22,22 @@ public class Item : MonoBehaviour
     [HideInInspector] 
     public Boolean dragged;
 
+    private Collider2D trigger;
+
 
     void Start()
     {
+        if(DisplaySprite){
+            spriteRenderer.sprite = DisplaySprite;
+        }
         rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
         colider = GetComponent<CircleCollider2D>();
         mainCamera = Camera.main;
         if (placed)
         {
             colider.radius *= snapThresholdScale;
             colider.isTrigger = true;
-            sr.enabled = false;
+            spriteRenderer.enabled = false;
             rb.bodyType = RigidbodyType2D.Static;
         }
         MatchParentSize();
@@ -84,7 +89,7 @@ public class Item : MonoBehaviour
             transform.position = snapObject.transform.position;
             transform.rotation = snapObject.transform.rotation; 
             rb.bodyType = RigidbodyType2D.Static;
-            sr.enabled = true;
+            spriteRenderer.enabled = true;
             snapObject.SetActive(false);
             
         }
@@ -114,8 +119,19 @@ public class Item : MonoBehaviour
         {
             return;
         }
-        other.GetComponent<SpriteRenderer>().enabled = true;
-        sr.enabled = false; 
+        if(trigger){
+            trigger.GetComponent<Item>().spriteRenderer.enabled = false;
+        }
+        trigger = other;
+        SpriteRenderer otherSpriteRenderer = other.GetComponent<Item>().spriteRenderer;
+        otherSpriteRenderer.sprite = DisplaySprite;
+        otherSpriteRenderer.transform.localScale = spriteRenderer.transform.localScale;
+    
+
+        otherSpriteRenderer.enabled = true;
+
+        //todo mimic sprite from drag item
+        spriteRenderer.enabled = false; 
 
 
         snapObject = other.gameObject;
@@ -124,25 +140,25 @@ public class Item : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         //Vermeiden von trigger whenn nich dragged und vom plazierten Object
-        if (placed || !dragged)
+        if (placed || !dragged || trigger != other )
         {
             return;
         }
-        other.GetComponent<SpriteRenderer>().enabled = false;
-        sr.enabled = true; 
+        other.GetComponent<Item>().spriteRenderer.enabled = false;
+        spriteRenderer.enabled = true; 
         snapObject = null;
     }
 
     void MatchParentSize()
     {
         Vector3 parentSize = size;
-        float x = parentSize.x / sr.sprite.bounds.size.x;
+        float x = parentSize.x / spriteRenderer.sprite.bounds.size.x;
         // Scale the sprite to match parent's size
-        sr.gameObject.transform.localScale = new Vector3(
+        spriteRenderer.gameObject.transform.localScale = new Vector3(
             x,
-            (parentSize.y / sr.sprite.bounds.size.y),
+            (parentSize.y / spriteRenderer.sprite.bounds.size.y),
             1f
         );
-        colider.radius = (size.x * (1/x)) / 2;
+        colider.radius = size.x/2;
     }
 }
