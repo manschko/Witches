@@ -15098,7 +15098,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433405435}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -15465,6 +15465,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1016119853}
   - component: {fileID: 1016119854}
+  - component: {fileID: 1016119855}
   m_Layer: 6
   m_Name: KillTrigger
   m_TagString: Untagged
@@ -15494,7 +15495,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1016119852}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -15533,6 +15534,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1016119855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016119852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e758d23969cd9f14e8a0e77b257c44cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1183747214
 GameObject:
   m_ObjectHideFlags: 0
@@ -16210,6 +16223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1606088269}
   - component: {fileID: 1606088270}
+  - component: {fileID: 1606088271}
   m_Layer: 6
   m_Name: LowerTrigger
   m_TagString: Untagged
@@ -16239,7 +16253,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1606088268}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -16278,6 +16292,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1606088271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606088268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adff19c2a2d175d4a904cf83af578070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftCollider: {fileID: 433405437}
+  rightCollider: {fileID: 1884488563}
+  killCollider: {fileID: 1016119854}
 --- !u!1 &1621628810
 GameObject:
   m_ObjectHideFlags: 0
@@ -16388,6 +16417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1703009846}
   - component: {fileID: 1703009847}
+  - component: {fileID: 1703009848}
   m_Layer: 6
   m_Name: UpperTrigger
   m_TagString: Untagged
@@ -16456,6 +16486,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1703009848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703009845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88202b257563c4546b2f541e55f27d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  potCollider: {fileID: 1606088270}
 --- !u!1 &1783575873
 GameObject:
   m_ObjectHideFlags: 0
@@ -16596,7 +16639,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884488561}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}

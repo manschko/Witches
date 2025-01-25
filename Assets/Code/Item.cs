@@ -116,7 +116,7 @@ public class Item : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         //Vermeiden von trigger whenn nich dragged und vom plazierten Object
-        if (placed || !dragged)
+        if (placed || !dragged || other.tag == "PotHole")
         {
             return;
         }
