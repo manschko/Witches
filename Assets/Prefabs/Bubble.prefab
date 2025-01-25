@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 693857643545263690}
   - component: {fileID: 4500822774131235069}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Item graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: -5676606294327442440}
   - component: {fileID: 1510541920423740714}
   - component: {fileID: 7521144355214302833}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -276,7 +276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4469964302750726062}
   - component: {fileID: 2861470207580735868}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pop2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6995889646976986278}
   - component: {fileID: 4158078516846071765}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pop2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -450,7 +450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5095661010767163996}
   - component: {fileID: 3693053227342229630}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bubble Graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -536,7 +536,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3311201791149591461}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -573,7 +573,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7761935625947180942}
   - component: {fileID: 5307281941212257338}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pop1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
