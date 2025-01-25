@@ -13,7 +13,4 @@ MonoBehaviour:
   m_Name: ItemList
   m_EditorClassIdentifier: 
   AllItems:
-  - Name: TestItem
-    DisplaySprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  - Name: Other Test Item
-    DisplaySprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 8910340850925841470, guid: 81383763a078bb547882af5b4593dc24, type: 3}

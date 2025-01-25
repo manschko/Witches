@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Test
-  DisplaySprite: {fileID: 0}
+  DisplaySprite: {fileID: -6182383596632484212, guid: fb20a979a07e445e1bd99ce254582f6d, type: 3}
   snapThresholdScale: 2
   placed: 0
   dragged: 0

@@ -694,6 +694,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33f79285230481e87eb7e18194425cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diviation: 3
+  ItemList: {fileID: 11400000, guid: 3169eccdbc15e4be0899422d249eada5, type: 2}
 --- !u!1001 &605966146
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -988,6 +990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53d4afcd7d8c84bc7bd8cf32a4e4964c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Target: {fileID: 0}
   RenderTexture: {fileID: 8400000, guid: f351f7094ec114c5fa8e0c88b82c1c76, type: 2}
   Multiplier: 0.5
 --- !u!1 &1360410194
