@@ -12,22 +12,22 @@ public class Item : MonoBehaviour
 
     private Rigidbody2D rb;
     private SpriteRenderer sr;
+    private CircleCollider2D colider;
     private Camera mainCamera;
 
     public Boolean placed;
     [HideInInspector] 
     public Boolean dragged;
 
-    private Boolean snaped;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        colider = GetComponent<CircleCollider2D>();
         mainCamera = Camera.main;
         if (placed)
         {
-            CircleCollider2D colider = GetComponent<CircleCollider2D>();
             colider.radius *= snapThresholdScale;
             colider.isTrigger = true;
             sr.enabled = false;
@@ -45,7 +45,7 @@ public class Item : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (placed || snaped)
+        if (placed)
         {
             return;
         }
@@ -72,11 +72,12 @@ public class Item : MonoBehaviour
         // Snap to placement Position
         if (snapObject != null)
         {
-            rb.bodyType = RigidbodyType2D.Static;
             transform.position = snapObject.transform.position;
             transform.rotation = snapObject.transform.rotation; 
             Destroy(snapObject);
-            snaped = true;
+            Destroy(rb);
+            Destroy(colider);
+            
         }
         dragged = false;
     }
