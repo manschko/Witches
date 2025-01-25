@@ -15,6 +15,8 @@ public class Bubble : MonoBehaviour
     public Animator Animator;
     public float VelocityDecay = 1f;
     public GameObject PopParticlePrefab;
+    public AudioClip PopSound;
+    public float PopSoundVolume = 1f;
 
     private float _aliveTime;
     private float _x, _y;
@@ -83,6 +85,7 @@ public class Bubble : MonoBehaviour
         var particles = Instantiate(PopParticlePrefab);
         particles.transform.position = transform.position;
         Destroy(particles, 1f);
+        AudioSource.PlayClipAtPoint(PopSound, transform.position, PopSoundVolume);
     }
 
     public float PopPushStrength = 1f;
