@@ -8,46 +8,33 @@ public class ItemManager : MonoBehaviour
 
     private int nextDrop = 0;
     public ItemList ItemList;
-    private List<Item> itemList; 
     private void Start()
     {
-        itemList = new List<Item>(ItemList.AllItems);
         Pot.OnBubbleSpawned.AddListener(bubble => { 
             bubble.OnPopped.AddListener(() => { spawnItem(bubble); });
             tryToAddItemToBubble(bubble);
-            bubble.OnDestroy.AddListener(()=>{returnItemToList(bubble);});
+
             });
-
-    }
-
-    private void returnItemToList(Bubble bubble)
-    {
-        if(!bubble.ContainedItem){
-            return;
-        }
-        itemList.Add(bubble.ContainedItem);
 
     }
 
     private void tryToAddItemToBubble(Bubble bubble)
     {
-        int itemCount = itemList.Count;
-        if(nextDrop <= 0 && itemCount > 0){
+        if(nextDrop <= 0){
             calcNextDrop();
-            int i = Random.Range(1,itemCount);
-            Item item = itemList[i-1];
+            int i = Random.Range(1,ItemList.AllItems.Count);
+            Item item = ItemList.AllItems[i-1];
             bubble.addItem(item);
-            itemList.Remove(item);
         }
     }
 
     private void calcNextDrop()
     {
         if(popCount < 7){
-            nextDrop = Random.Range(popCount, popCount + diviation);
+            nextDrop = popCount = Random.Range(popCount, popCount + diviation);
         }
 
-        nextDrop = Random.Range(10-diviation, 10 + diviation);
+        nextDrop = popCount = Random.Range(10-diviation, 10 + diviation);
     }
 
     private void spawnItem(Bubble bubble)
