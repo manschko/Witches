@@ -1,5 +1,4 @@
 using System;
-using UnityEditor;
 using UnityEngine;
 
 [Serializable]
@@ -126,8 +125,9 @@ public class Item : MonoBehaviour
 
     private bool IsSamePrefab(GameObject obj1, GameObject obj2)
     {
-        GameObject prefab1 = PrefabUtility.GetCorrespondingObjectFromSource(obj1);
-        GameObject prefab2 = PrefabUtility.GetCorrespondingObjectFromSource(obj2);
-        return prefab1 == prefab2;
+        return true;
+        //GameObject prefab1 = PrefabUtility.GetCorrespondingObjectFromSource(obj1);
+        //GameObject prefab2 = PrefabUtility.GetCorrespondingObjectFromSource(obj2);
+        //return prefab1 == prefab2;
     }
 }
