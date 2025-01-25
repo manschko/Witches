@@ -101,7 +101,7 @@ public class Item : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         //Vermeiden von trigger whenn nich dragged und vom plazierten Object
-        if (placed || !dragged || !IsSamePrefab(other.gameObject, gameObject))
+        if (placed || !dragged)
         {
             return;
         }
@@ -124,10 +124,7 @@ public class Item : MonoBehaviour
         snapObject = null;
     }
 
-    private bool IsSamePrefab(GameObject obj1, GameObject obj2)
-    {
-        GameObject prefab1 = PrefabUtility.GetCorrespondingObjectFromSource(obj1);
-        GameObject prefab2 = PrefabUtility.GetCorrespondingObjectFromSource(obj2);
-        return prefab1 == prefab2;
-    }
+    //todo loottable
+    //item in der bubble sichtbar
+    //
 }

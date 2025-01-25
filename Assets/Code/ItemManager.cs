@@ -23,7 +23,7 @@ public class ItemManager : MonoBehaviour
             );
 
         spawendItem.GetComponent<Rigidbody2D>().linearVelocity =
-            new Vector2(Random.Range(-15, 15), Random.Range(-15, 15));
+            new Vector2(Random.Range(-15, 15), Random.Range(5, 15));
         
     }
 }
