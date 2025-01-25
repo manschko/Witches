@@ -1,0 +1,494 @@
+fileFormatVersion: 2
+guid: 2ca09bd6cb1444409b7377c098322214
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2958779183419688290
+    second: Titelloses_61_20250125115857_0
+  - first:
+      213: -6042666157209580498
+    second: Titelloses_61_20250125115857_1
+  - first:
+      213: 5357078650507565411
+    second: Titelloses_61_20250125115857_2
+  - first:
+      213: -6886534107353177272
+    second: Titelloses_61_20250125115857_3
+  - first:
+      213: -4100627442127977717
+    second: Titelloses_61_20250125115857_4
+  - first:
+      213: -6107162384650671549
+    second: Titelloses_61_20250125115857_5
+  - first:
+      213: 5794205256027616065
+    second: Titelloses_61_20250125115857_6
+  - first:
+      213: 6652114899598143558
+    second: Titelloses_61_20250125115857_7
+  - first:
+      213: 6877271165975381023
+    second: Titelloses_61_20250125115857_8
+  - first:
+      213: 2309009280477512300
+    second: Titelloses_61_20250125115857_9
+  - first:
+      213: -1201841684430696009
+    second: Titelloses_61_20250125115857_10
+  - first:
+      213: -6976547649587205987
+    second: Titelloses_61_20250125115857_11
+  - first:
+      213: -3255499239656678716
+    second: Titelloses_61_20250125115857_12
+  - first:
+      213: -254083393545728877
+    second: Titelloses_61_20250125115857_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Titelloses_61_20250125115857_0
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 660
+        width: 79
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9af27b420e40f6d0800000000000000
+      internalID: -2958779183419688290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titelloses_61_20250125115857_1
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 712
+        width: 200
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2c8f3b3523242ca0800000000000000
+      internalID: -6042666157209580498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titelloses_61_20250125115857_2
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 654
+        width: 91
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 369155d46aa285a40800000000000000
+      internalID: 5357078650507565411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titelloses_61_20250125115857_3
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 575
+        width: 113
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8432a9d37bd1e60a0800000000000000
+      internalID: -6886534107353177272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titelloses_61_20250125115857_4
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 666
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b034eb34115a717c0800000000000000
+      internalID: -4100627442127977717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titelloses_61_20250125115857_5
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 545
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34ae4451b200f3ba0800000000000000
+      internalID: -6107162384650671549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titelloses_61_20250125115857_6
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 421
+        width: 140
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1433a393bf6296050800000000000000
+      internalID: 5794205256027616065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titelloses_61_20250125115857_7
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 466
+        width: 136
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64071abb14f015c50800000000000000
+      internalID: 6652114899598143558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titelloses_61_20250125115857_8
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 430
+        width: 97
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f14cff720b9f07f50800000000000000
+      internalID: 6877271165975381023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titelloses_61_20250125115857_9
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 236
+        width: 264
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6241f9f4bf3b0020800000000000000
+      internalID: 2309009280477512300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titelloses_61_20250125115857_10
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 211
+        width: 97
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b1504b0b53325fe0800000000000000
+      internalID: -1201841684430696009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titelloses_61_20250125115857_11
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 18
+        width: 323
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d98a4c340e25e2f90800000000000000
+      internalID: -6976547649587205987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titelloses_61_20250125115857_12
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 85
+        width: 101
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca95bd90b422d2d0800000000000000
+      internalID: -3255499239656678716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Titelloses_61_20250125115857_13
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 26
+        width: 177
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39c8160ff70597cf0800000000000000
+      internalID: -254083393545728877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Titelloses_61_20250125115857_0: -2958779183419688290
+      Titelloses_61_20250125115857_1: -6042666157209580498
+      Titelloses_61_20250125115857_10: -1201841684430696009
+      Titelloses_61_20250125115857_11: -6976547649587205987
+      Titelloses_61_20250125115857_12: -3255499239656678716
+      Titelloses_61_20250125115857_13: -254083393545728877
+      Titelloses_61_20250125115857_2: 5357078650507565411
+      Titelloses_61_20250125115857_3: -6886534107353177272
+      Titelloses_61_20250125115857_4: -4100627442127977717
+      Titelloses_61_20250125115857_5: -6107162384650671549
+      Titelloses_61_20250125115857_6: 5794205256027616065
+      Titelloses_61_20250125115857_7: 6652114899598143558
+      Titelloses_61_20250125115857_8: 6877271165975381023
+      Titelloses_61_20250125115857_9: 2309009280477512300
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
