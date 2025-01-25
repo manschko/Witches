@@ -12,6 +12,22 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 187880165198662841, guid: 81383763a078bb547882af5b4593dc24, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1438707825768440555, guid: 178cf0f3397630c1099a0f0ce6be759d, type: 3}
+    - target: {fileID: 187880165198662841, guid: 81383763a078bb547882af5b4593dc24, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9811321
+      objectReference: {fileID: 0}
+    - target: {fileID: 187880165198662841, guid: 81383763a078bb547882af5b4593dc24, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9811321
+      objectReference: {fileID: 0}
+    - target: {fileID: 187880165198662841, guid: 81383763a078bb547882af5b4593dc24, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9811321
+      objectReference: {fileID: 0}
     - target: {fileID: 1309580085941738938, guid: 81383763a078bb547882af5b4593dc24, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.32
