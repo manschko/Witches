@@ -51,6 +51,12 @@ public class PopHelper : MonoBehaviour
     {
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         var pos = ray.origin;
-        //_bubbles.Select(x => x.)
+        var closest = _bubbles.OrderBy(x => Vector2.Distance(x.transform.position, pos)).First();
+        var closestDistance = Vector2.Distance(closest.transform.position, pos);
+        Debug.Log(closestDistance);
+        if(closestDistance < 2f)
+        {
+            closest.Pop(false);
+        }
     }
 }

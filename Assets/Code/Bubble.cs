@@ -1,8 +1,6 @@
 ﻿using System.Collections;
 using System.Linq;
 using Unity.Cinemachine;
-using Unity.VisualScripting;
-using Unity.VisualScripting.ReorderableList;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -75,9 +73,17 @@ public class Bubble : MonoBehaviour
     {
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         var results = Physics2D.OverlapPointAll(ray.origin);
-        if (results.Any(x => x.gameObject == gameObject) && Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            StartCoroutine(DelayedPop());
+            if (results.Any(x => x.gameObject == gameObject))
+            {
+                StartCoroutine(DelayedPop());
+                PopHelper.RegisterClick();
+            }
+            else
+            {
+                PopHelper.RegisterNonClick(this);
+            }
         }
     }
 
