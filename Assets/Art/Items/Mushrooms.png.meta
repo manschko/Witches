@@ -1,25 +1,13 @@
 fileFormatVersion: 2
-guid: 57cfa58921f226f978ba99ad1a723fcb
+guid: 0a37d33953ebb475d87a5c0673f1fd84
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -809746192205290908
-    second: skullLamp_0
+      213: 8901842017000291208
+    second: Mushrooms_0
   - first:
-      213: -3276322348231993810
-    second: skullLamp_1
-  - first:
-      213: 9151734186514016528
-    second: skullLamp_2
-  - first:
-      213: 8682824559020820651
-    second: skullLamp_3
-  - first:
-      213: 3039962249271649646
-    second: skullLamp_4
-  - first:
-      213: 3357723269308434353
-    second: skullLamp_5
+      213: -4684916708011110980
+    second: Mushrooms_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -111,17 +99,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: skullLamp_0
+      name: Mushrooms_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 628
-        width: 137
-        height: 268
+        x: 1
+        y: 3
+        width: 740
+        height: 671
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 462e06fd02433c4f0800000000000000
-      internalID: -809746192205290908
+      spriteID: 88bf2f58622b98b70800000000000000
+      internalID: 8901842017000291208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skullLamp_1
+      name: Mushrooms_1
       rect:
         serializedVersion: 2
-        x: 493
-        y: 803
-        width: 45
-        height: 95
+        x: 693
+        y: 69
+        width: 317
+        height: 417
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,96 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e2655f7de2a2882d0800000000000000
-      internalID: -3276322348231993810
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skullLamp_2
-      rect:
-        serializedVersion: 2
-        x: 649
-        y: 812
-        width: 44
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 01967f131cd710f70800000000000000
-      internalID: 9151734186514016528
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skullLamp_3
-      rect:
-        serializedVersion: 2
-        x: 725
-        y: 738
-        width: 57
-        height: 103
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ba8497fcee69f7870800000000000000
-      internalID: 8682824559020820651
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skullLamp_4
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 227
-        width: 957
-        height: 560
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e652f6e2f8d103a20800000000000000
-      internalID: 3039962249271649646
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skullLamp_5
-      rect:
-        serializedVersion: 2
-        x: 375
-        y: 726
-        width: 47
-        height: 85
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1b741310687099e20800000000000000
-      internalID: 3357723269308434353
+      spriteID: cbd84b86315dbfeb0800000000000000
+      internalID: -4684916708011110980
       vertices: []
       indices: 
       edges: []
@@ -260,12 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      skullLamp_0: -809746192205290908
-      skullLamp_1: -3276322348231993810
-      skullLamp_2: 9151734186514016528
-      skullLamp_3: 8682824559020820651
-      skullLamp_4: 3039962249271649646
-      skullLamp_5: 3357723269308434353
+      Mushrooms_0: 8901842017000291208
+      Mushrooms_1: -4684916708011110980
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

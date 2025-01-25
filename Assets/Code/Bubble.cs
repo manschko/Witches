@@ -22,6 +22,9 @@ public class Bubble : MonoBehaviour
     public float PopSoundVolume = 1f;
     public float ItemScale = .6f;
 
+    public FMODUnity.EventReference PopEvent;
+
+
     private float _aliveTime;
     private float _x, _y;
     private bool _isPopped;
@@ -108,7 +111,10 @@ public class Bubble : MonoBehaviour
         var particles = Instantiate(PopParticlePrefab);
         particles.transform.position = transform.position;
         Destroy(particles, 1f);
-        AudioSource.PlayClipAtPoint(PopSound, transform.position, PopSoundVolume);
+
+        //AudioSource.PlayClipAtPoint(PopSound, transform.position, PopSoundVolume);
+        FMODUnity.RuntimeManager.PlayOneShot(PopEvent, transform.position);
+        Debug.Log("PLAAYYYY");
     }
 
     public float PopPushStrength = 1f;

@@ -10,11 +10,14 @@ public class Pot : MonoBehaviour
     public Vector2 SpawnDeviation = new Vector2(-0.5f, 1f);
     public GameObject PotPrefab;
     public BoxCollider2D SpawnArea;
+    public FMODUnity.EventReference MusicEvent;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _spawnDelay = GetSpawnDelay();
+
+        FMODUnity.RuntimeManager.PlayOneShot(MusicEvent, transform.position);
     }
 
     private float _spawnDelay = 0f;
