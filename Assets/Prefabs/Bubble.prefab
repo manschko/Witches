@@ -48,9 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537cb5bc37e4b4de8a0c079ba2cf726b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ContainedItem:
-    Name: 
-    DisplaySprite: {fileID: 0}
+  ContainedItem: {fileID: 8910340850925841470, guid: 81383763a078bb547882af5b4593dc24, type: 3}
   OnPopped:
     m_PersistentCalls:
       m_Calls: []
