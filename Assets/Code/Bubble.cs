@@ -33,7 +33,7 @@ public class Bubble : MonoBehaviour
         //y = Random.Range(0, 100000);
         Speed *= Random.Range(RandomSpeedMultiplier.x, RandomSpeedMultiplier.y);
         transform.localScale *= Random.Range(RandomSize.x, RandomSize.y);
-        Renderer.color = Color.HSVToRGB(Random.Range(0f, 1f), Random.Range(0.0f, 0.3f), 1f);
+        //Renderer.color = Color.HSVToRGB(Random.Range(0f, 1f), Random.Range(0.0f, 0.3f), 1f);
     }
 
     private void Update()
