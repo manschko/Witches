@@ -6,6 +6,7 @@ using UnityEngine;
 [Serializable]
 public class Item : MonoBehaviour
 {
+    public DeleteState deleteState;
     public string Name;
     public Sprite DisplaySprite;
     public float snapThresholdScale = 2.0f;
@@ -161,4 +162,9 @@ public class Item : MonoBehaviour
         );
         colider.radius = size.x/2;
     }
+}
+
+public enum DeleteState {
+DELETABLE,
+INCOULDRON
 }
