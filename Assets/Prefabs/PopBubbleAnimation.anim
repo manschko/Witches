@@ -86,7 +86,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: Visual
+    path: Visual/Bubble Graphic
     classID: 212
     script: {fileID: 0}
     flags: 0
@@ -108,7 +108,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3966078249
+      path: 1577873318
       attribute: 304273561
       script: {fileID: 0}
       typeID: 212
@@ -290,7 +290,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: Visual
+    path: Visual/Bubble Graphic
     classID: 212
     script: {fileID: 0}
     flags: 0

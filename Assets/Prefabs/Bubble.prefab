@@ -52,7 +52,7 @@ MonoBehaviour:
   OnPopped:
     m_PersistentCalls:
       m_Calls: []
-  Renderer: {fileID: 646335462272676439}
+  Renderer: {fileID: 3693053227342229630}
   Impulse: {fileID: 1510541920423740714}
   Speed: 4
   RandomSpeedMultiplier: {x: 1, y: 1}
@@ -60,6 +60,8 @@ MonoBehaviour:
   Animator: {fileID: 7521144355214302833}
   VelocityDecay: 1
   PopParticlePrefab: {fileID: 4521941874659273961, guid: d7bacf804d98740c3af7a767bc50d14b, type: 3}
+  PopSound: {fileID: 8300000, guid: 2ba67d8d38a884e60b2d34ebc8ed96ee, type: 3}
+  PopSoundVolume: 1
   PopPushStrength: 1
 --- !u!58 &-5676606294327442440
 CircleCollider2D:
@@ -172,7 +174,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1 &8049430557605466042
+--- !u!1 &7491119178517700263
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,37 +182,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3311201791149591461}
-  - component: {fileID: 646335462272676439}
+  - component: {fileID: 5095661010767163996}
+  - component: {fileID: 3693053227342229630}
   m_Layer: 0
-  m_Name: Visual
+  m_Name: Bubble Graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3311201791149591461
+--- !u!4 &5095661010767163996
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8049430557605466042}
+  m_GameObject: {fileID: 7491119178517700263}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 0.063085, y: 0.063085, z: 0.063085}
+  m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 93517128170891972}
+  m_Father: {fileID: 3311201791149591461}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &646335462272676439
+--- !u!212 &3693053227342229630
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8049430557605466042}
+  m_GameObject: {fileID: 7491119178517700263}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -248,8 +250,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 4311333806000096859, guid: 552e37546162d4c9e95b91e7a42b0630, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -259,3 +261,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &8049430557605466042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3311201791149591461}
+  m_Layer: 0
+  m_Name: Visual
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3311201791149591461
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8049430557605466042}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 5095661010767163996}
+  m_Father: {fileID: 93517128170891972}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
