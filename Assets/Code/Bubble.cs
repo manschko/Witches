@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections;
+using System.Linq;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Events;
@@ -25,7 +26,7 @@ public class Bubble : MonoBehaviour
     private float _x, _y;
     private bool _isPopped;
     private Vector2 _popVelocity;
-
+    
 
     private void Start()
     {
@@ -60,7 +61,7 @@ public class Bubble : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if(IsBeingClicked()) Pop(false);
+        HandleClicked();
 
         _popVelocity.x = Mathf.SmoothDamp(_popVelocity.x, 0f, ref _velocityStopX, VelocityDecay);
         _popVelocity.y = Mathf.SmoothDamp(_popVelocity.y, 0f, ref _velocityStopY, VelocityDecay);
@@ -68,15 +69,22 @@ public class Bubble : MonoBehaviour
 
     private float _velocityStopX, _velocityStopY;
 
-    private bool IsBeingClicked()
+    private void HandleClicked()
     {
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         var results = Physics2D.OverlapPointAll(ray.origin);
         if (results.Any(x => x.gameObject == gameObject) && Input.GetMouseButtonDown(0))
         {
-            return true;
+            StartCoroutine(DelayedPop());
         }
-        return false;
+    }
+
+    private IEnumerator DelayedPop()
+    {
+        var delay = PopHelper.MultiDelay;
+        PopHelper.RegisterPop();
+        yield return new WaitForSeconds(delay);
+        Pop(false);
     }
 
     public void Pop(bool silent)
