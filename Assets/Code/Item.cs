@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 [Serializable]
@@ -7,6 +8,8 @@ public class Item : MonoBehaviour
     public string Name;
     public Sprite DisplaySprite;
     public float snapThresholdScale = 2.0f;
+
+    public Vector3 size = new Vector3(10,10,0);
 
 
     private Rigidbody2D rb;
@@ -32,6 +35,7 @@ public class Item : MonoBehaviour
             sr.enabled = false;
             rb.bodyType = RigidbodyType2D.Static;
         }
+        MatchParentSize();
     }
 
     [Range(0.0f, 100.0f)] public float damping = 1.0f;
@@ -129,7 +133,16 @@ public class Item : MonoBehaviour
         snapObject = null;
     }
 
-    //todo loottable
-    //item in der bubble sichtbar
-    //
+    void MatchParentSize()
+    {
+        Vector3 parentSize = size;
+        float x = parentSize.x / sr.sprite.bounds.size.x;
+        // Scale the sprite to match parent's size
+        sr.gameObject.transform.localScale = new Vector3(
+            x,
+            (parentSize.y / sr.sprite.bounds.size.y),
+            1f
+        );
+        colider.radius = (size.x * (1/x)) / 2;
+    }
 }
