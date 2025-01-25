@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Linq;
 using Unity.Cinemachine;
+using Unity.VisualScripting;
+using Unity.VisualScripting.ReorderableList;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -124,5 +126,11 @@ public class Bubble : MonoBehaviour
             (parentSize.y / ItemRenderer.sprite.bounds.size.y) * ItemScale,
             1f
         );
+    }
+
+    public void addItem(Item item){
+        ContainedItem = item;
+        ItemRenderer.sprite = item.DisplaySprite;
+        MatchParentSize();
     }
 }
