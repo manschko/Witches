@@ -48,6 +48,11 @@ public class Item : MonoBehaviour
         {
             return;
         }
+        if(snapObject){
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            snapObject.SetActive(true);
+
+        }
         dragged = true;
         Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
 
@@ -69,16 +74,17 @@ public class Item : MonoBehaviour
         Destroy(joint);
         joint = null;
         // Snap to placement Position
+        dragged = false;
         if (snapObject != null)
         {
             transform.position = snapObject.transform.position;
             transform.rotation = snapObject.transform.rotation; 
-            Destroy(snapObject);
-            Destroy(rb);
-            Destroy(colider);
+            rb.bodyType = RigidbodyType2D.Static;
+            sr.enabled = true;
+            snapObject.SetActive(false);
             
         }
-        dragged = false;
+        
     }
 
     void OnMouseDrag()
