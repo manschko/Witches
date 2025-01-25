@@ -105,7 +105,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: -712631045867808456, guid: b670ab75dde984907b8570040daa08c5, type: 3}
   m_Color: {r: 0.9339623, g: 0.048460312, b: 0.6286167, a: 1}
   m_FlipX: 0
@@ -131,6 +131,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Test
   DisplaySprite: {fileID: 0}
+  snapThresholdScale: 2
+  placed: 0
+  dragged: 0
   damping: 1
   frequency: 5
   debug: 1

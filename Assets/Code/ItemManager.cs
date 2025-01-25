@@ -13,6 +13,9 @@ public class ItemManager : MonoBehaviour
 
     private void spawnItem(Bubble bubble)
     {
+        if(!bubble.ContainedItem){
+            return;
+        }
         GameObject spawendItem = Instantiate(
             bubble.ContainedItem.gameObject,
             bubble.transform.position, 
@@ -21,5 +24,6 @@ public class ItemManager : MonoBehaviour
 
         spawendItem.GetComponent<Rigidbody2D>().linearVelocity =
             new Vector2(Random.Range(-15, 15), Random.Range(-15, 15));
+        
     }
 }
