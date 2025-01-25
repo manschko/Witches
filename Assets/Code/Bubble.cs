@@ -8,6 +8,7 @@ public class Bubble : MonoBehaviour
     public Item ContainedItem;
     public UnityEvent OnPopped = new UnityEvent();
     public SpriteRenderer Renderer;
+    public SpriteRenderer ItemRenderer;
     public CinemachineImpulseSource Impulse;
     public float Speed = 4f;
     public Vector2 RandomSpeedMultiplier = new Vector2(0.9f, 1.1f);
@@ -17,14 +18,18 @@ public class Bubble : MonoBehaviour
     public GameObject PopParticlePrefab;
     public AudioClip PopSound;
     public float PopSoundVolume = 1f;
+    public float ItemScale = .8f;
 
     private float _aliveTime;
     private float _x, _y;
     private bool _isPopped;
     private Vector2 _popVelocity;
 
+
     private void Start()
     {
+        //todo add logic to add item the resize
+        //MatchParentSize();
         //y = Random.Range(0, 100000);
         Speed *= Random.Range(RandomSpeedMultiplier.x, RandomSpeedMultiplier.y);
         transform.localScale *= Random.Range(RandomSize.x, RandomSize.y);
@@ -47,11 +52,11 @@ public class Bubble : MonoBehaviour
         //pos.x += ((Wind.CurrentWindDirection - 0.5f) * 2) * Wind.CurrentWindStrength * Time.deltaTime * _aliveTime;
         transform.position = pos;
 
-        if (!Renderer.isVisible)
+        /*if (!Renderer.isVisible)
         {
             Pot.AllBubbles.Remove(this);
             Destroy(gameObject);
-        }
+        }*/
 
         if(IsBeingClicked()) Pop(false);
 
@@ -97,5 +102,17 @@ public class Bubble : MonoBehaviour
         var direction = (transform.position - bubble.transform.position).normalized ;
         _popVelocity.x += direction.x * pushStrength * PopPushStrength;
         _popVelocity.y += direction.y * pushStrength * PopPushStrength;
+    }
+
+    void MatchParentSize()
+    {
+        Vector3 parentSize = Renderer.bounds.size;
+        
+        // Scale the sprite to match parent's size
+        ItemRenderer.gameObject.transform.localScale = new Vector3(
+            (parentSize.x / ItemRenderer.sprite.bounds.size.x) * ItemScale,
+            (parentSize.y / ItemRenderer.sprite.bounds.size.y) * ItemScale,
+            1f
+        );
     }
 }
