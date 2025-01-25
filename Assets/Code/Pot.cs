@@ -1,17 +1,20 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Pot : MonoBehaviour
 {
     public static UnityEvent<Bubble> OnBubbleSpawned = new UnityEvent<Bubble>();
+    public static List<Bubble> AllBubbles = new List<Bubble>();
     public float SpawnTimer = 1f;
+    public Vector2 SpawnDeviation = new Vector2(-0.5f, 1f);
     public GameObject PotPrefab;
     public BoxCollider2D SpawnArea;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _spawnDelay = SpawnTimer;
+        _spawnDelay = GetSpawnDelay();
     }
 
     private float _spawnDelay = 0f;
@@ -20,18 +23,25 @@ public class Pot : MonoBehaviour
     void Update()
     {
         _spawnDelay -= Time.deltaTime;
-        if(_spawnDelay <= 0f)
+        if (_spawnDelay <= 0f)
         {
-            _spawnDelay = SpawnTimer;
+            _spawnDelay = GetSpawnDelay();
             SpawnBubble();
         }
     }
+
+    private float GetSpawnDelay()
+    {
+        return Random.Range(SpawnDeviation.x, SpawnDeviation.y) + SpawnTimer;
+    }        
 
     public void SpawnBubble()
     {
         var instance = Instantiate(PotPrefab);
         instance.transform.position = GetRandomSpawnLocation();
-        OnBubbleSpawned.Invoke(instance.GetComponent<Bubble>());
+        var bubble = instance.GetComponent<Bubble>();
+        OnBubbleSpawned.Invoke(bubble);
+        AllBubbles.Add(bubble);
     }
 
     private Vector2 GetRandomSpawnLocation()
