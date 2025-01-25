@@ -12,7 +12,8 @@ public class SetRenderTextureResolution : MonoBehaviour
         RenderTexture.Release();
         RenderTexture.width = (int)(Screen.width * Multiplier);
         RenderTexture.height = (int)(Screen.height * Multiplier);
-       // Target.targetTexture
+        Target.targetTexture = null;
+        Target.targetTexture = RenderTexture;
     }
 
     // Update is called once per frame
