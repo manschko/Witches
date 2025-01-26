@@ -20,6 +20,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         leftCollider.enabled = true;
         rightCollider.enabled = true;
         killCollider.enabled = true;
+        other.GetComponent<Item>().spriteRenderer.sortingOrder = -2;
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -28,5 +29,6 @@ public class NewMonoBehaviourScript : MonoBehaviour
         rightCollider.enabled = false;
         killCollider.enabled = false;
         collider2D.enabled = false;
+        other.GetComponent<Item>().spriteRenderer.sortingOrder = 10;
     }
 }
