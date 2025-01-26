@@ -112,11 +112,18 @@ public class Item : MonoBehaviour
             return;
         }
         var worldPos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        joint.target = worldPos;
-
-
-        if (debug)
-            Debug.DrawLine(joint.transform.TransformPoint(joint.anchor), worldPos, debugColor);
+        if (trigger)
+        {
+            transform.position = new Vector3(worldPos.x , worldPos.y, transform.position.z);
+        }
+        else
+        {
+            
+            joint.target = worldPos;
+            if (debug)
+                Debug.DrawLine(joint.transform.TransformPoint(joint.anchor), worldPos, debugColor);
+        }
+       
     }
 
 
@@ -131,6 +138,7 @@ public class Item : MonoBehaviour
             trigger.GetComponent<Item>().spriteRenderer.enabled = false;
         }
         trigger = other;
+        colider.radius = (size.x/2) - 0.1f;
         SpriteRenderer otherSpriteRenderer = other.GetComponent<Item>().spriteRenderer;
         otherSpriteRenderer.sprite = DisplaySprite;
         otherSpriteRenderer.transform.localScale = spriteRenderer.transform.localScale;
@@ -155,6 +163,8 @@ public class Item : MonoBehaviour
         other.GetComponent<Item>().spriteRenderer.enabled = false;
         spriteRenderer.enabled = true; 
         snapObject = null;
+        colider.radius = size.x/2;
+        trigger = null;
     }
 
     void MatchParentSize()
@@ -167,5 +177,6 @@ public class Item : MonoBehaviour
             (parentSize.y / spriteRenderer.sprite.bounds.size.y),
             1f
         );
+        colider.radius = size.x / 2;
     }
 }
