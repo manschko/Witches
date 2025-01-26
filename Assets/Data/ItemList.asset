@@ -13,5 +13,13 @@ MonoBehaviour:
   m_Name: ItemList
   m_EditorClassIdentifier: 
   AllItems:
+  - {fileID: 8198301180116257974, guid: 7579d0c8b7e174aedb70e7995ec69e4a, type: 3}
+  - {fileID: 8198301180116257974, guid: a68066b5da74f43a9a5c4c3244ab6dba, type: 3}
+  - {fileID: 8198301180116257974, guid: e4ebeb737093343878645af61266973a, type: 3}
   - {fileID: 8198301180116257974, guid: 5b6a2cda5f8ec4a55ab6569ee45c86cc, type: 3}
+  - {fileID: 8198301180116257974, guid: ef3dccfa500dc434ea6dbc6e4532c5ac, type: 3}
+  - {fileID: 8198301180116257974, guid: c5475868e6e074f9a83b88febec0df81, type: 3}
+  - {fileID: 8198301180116257974, guid: e6f13ef1b57b04d768c5362351f5decb, type: 3}
+  - {fileID: 8198301180116257974, guid: b285070e8ce6545cca83df1ecf4897d1, type: 3}
+  - {fileID: 8198301180116257974, guid: c59ef75d4b71848989fe5bbcc8b30f03, type: 3}
   - {fileID: 8198301180116257974, guid: 1f980588d8fade4249bf63de98eb20ae, type: 3}

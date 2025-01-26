@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 178cf0f3397630c1099a0f0ce6be759d
+guid: bc6b459a2cdc44816bb7004a8816af3b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1438707825768440555
-    second: eyeJar_0
-  - first:
-      213: 4921312641887492112
-    second: eyeJar_1
+      213: 6085338041668243844
+    second: Jar_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: eyeJar_0
+      name: Jar_0
       rect:
         serializedVersion: 2
-        x: 105
-        y: 2
-        width: 818
-        height: 1018
+        x: 75
+        y: 7
+        width: 866
+        height: 1002
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 51d5f75eadea80ce0800000000000000
-      internalID: -1438707825768440555
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: eyeJar_1
-      rect:
-        serializedVersion: 2
-        x: 917
-        y: 704
-        width: 8
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 018d75806c30c4440800000000000000
-      internalID: 4921312641887492112
+      spriteID: 4819ec715b6737450800000000000000
+      internalID: 6085338041668243844
       vertices: []
       indices: 
       edges: []
@@ -163,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      eyeJar_0: -1438707825768440555
-      eyeJar_1: 4921312641887492112
+      Jar_0: 6085338041668243844
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
