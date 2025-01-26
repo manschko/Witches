@@ -6,7 +6,6 @@ using UnityEngine;
 [Serializable]
 public class Item : MonoBehaviour
 {
-    public DeleteState deleteState;
     public string Name;
     public Sprite DisplaySprite;
     public float snapThresholdScale = 2.0f;
@@ -36,12 +35,21 @@ public class Item : MonoBehaviour
         mainCamera = Camera.main;
         if (placed)
         {
-            colider.radius *= snapThresholdScale;
             colider.isTrigger = true;
             spriteRenderer.enabled = false;
             rb.bodyType = RigidbodyType2D.Static;
         }
         MatchParentSize();
+        
+    }
+    
+    void OnDrawGizmos()
+    {
+        if (debug)
+        {
+            Gizmos.color = debugColor;
+            Gizmos.DrawWireCube(colider.transform.position, colider.transform.localScale);
+        }
     }
 
     [Range(0.0f, 100.0f)] public float damping = 1.0f;
@@ -103,7 +111,6 @@ public class Item : MonoBehaviour
         {
             return;
         }
-
         var worldPos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         joint.target = worldPos;
 
@@ -160,11 +167,5 @@ public class Item : MonoBehaviour
             (parentSize.y / spriteRenderer.sprite.bounds.size.y),
             1f
         );
-        colider.radius = size.x/2;
     }
-}
-
-public enum DeleteState {
-DELETABLE,
-INCOULDRON
 }
