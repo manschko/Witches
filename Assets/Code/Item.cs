@@ -8,6 +8,8 @@ using Random = UnityEngine.Random;
 [Serializable]
 public class Item : MonoBehaviour
 {
+    public GameObject FullLight;
+    public GameObject InPotLight;
     public string Name;
     public Sprite DisplaySprite;
     public float snapThresholdScale = 2.0f;
