@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -26
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -148,7 +148,7 @@ MonoBehaviour:
   Impulse: {fileID: 1510541920423740714}
   Speed: 4
   RandomSpeedMultiplier: {x: 1, y: 1}
-  RandomSize: {x: 0.7, y: 1.3}
+  RandomSize: {x: 1, y: 2}
   Animator: {fileID: 7521144355214302833}
   VelocityDecay: 1
   PopParticlePrefab: {fileID: 4521941874659273961, guid: d7bacf804d98740c3af7a767bc50d14b, type: 3}
@@ -162,13 +162,6 @@ MonoBehaviour:
       Data3: 639423631
       Data4: 2015917066
     Path: event:/SFX/Bubbleburst
-  PlayerStateEvent:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   PopPushStrength: 1
 --- !u!58 &-5676606294327442440
 CircleCollider2D:
@@ -614,9 +607,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: -27
   m_Sprite: {fileID: 4311333806000096859, guid: 552e37546162d4c9e95b91e7a42b0630, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6305255, g: 0.773, b: 0.4425804, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

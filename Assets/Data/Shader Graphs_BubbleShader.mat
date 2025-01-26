@@ -64,6 +64,7 @@ Material:
     m_Floats:
     - _Ambient: 1
     - _Medium: 1.5
+    - _Reflection_Strength: 6
     - _Thickness: 0.03
     m_Colors: []
   m_BuildTextureStacks: []
