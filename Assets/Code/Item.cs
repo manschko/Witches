@@ -123,7 +123,7 @@ public class Item : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         //Vermeiden von trigger whenn nich dragged und vom plazierten Object
-        if (placed || !dragged || other.tag == "PotHole")
+        if (placed || !dragged || other.CompareTag("PotHole") )
         {
             return;
         }
