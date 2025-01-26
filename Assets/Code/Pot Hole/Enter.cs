@@ -9,7 +9,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private Collider2D ownCollider;
 
-    private string ItemLayerInPot = "ItemInPot";
+    private string ItemLayerInPot = "Default";
     private string ItemLayer = "PotItems";
 
     private void Start()

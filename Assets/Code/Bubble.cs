@@ -23,6 +23,7 @@ public class Bubble : MonoBehaviour
     public float ItemScale = .6f;
 
     public FMODUnity.EventReference PopEvent;
+    public FMODUnity.EventReference SpawnItemEvent;
 
 
     private float _aliveTime;
@@ -115,7 +116,10 @@ public class Bubble : MonoBehaviour
 
         //AudioSource.PlayClipAtPoint(PopSound, transform.position, PopSoundVolume);
         FMODUnity.RuntimeManager.PlayOneShot(PopEvent, transform.position);
-        Debug.Log("PLAAYYYY");
+        if(ContainedItem != null)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(SpawnItemEvent, transform.position);
+        }
     }
 
     public float PopPushStrength = 1f;

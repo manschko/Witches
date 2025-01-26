@@ -162,6 +162,13 @@ MonoBehaviour:
       Data3: 639423631
       Data4: 2015917066
     Path: event:/SFX/Bubbleburst
+  SpawnItemEvent:
+    Guid:
+      Data1: -1677447608
+      Data2: 1330900974
+      Data3: -1801322079
+      Data4: 215095274
+    Path: event:/SFX/Spawn
   PopPushStrength: 1
 --- !u!58 &-5676606294327442440
 CircleCollider2D:
@@ -323,7 +330,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.834
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.25
+  m_Intensity: 1
   m_LightVolumeIntensity: 0.23
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
