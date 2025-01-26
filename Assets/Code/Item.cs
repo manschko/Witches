@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
+using Random = UnityEngine.Random;
 
 [Serializable]
 public class Item : MonoBehaviour
@@ -22,6 +24,7 @@ public class Item : MonoBehaviour
     public Boolean placed;
     [HideInInspector] 
     public Boolean dragged;
+    public Light2D Light;
 
     private Collider2D trigger;
 
@@ -36,12 +39,13 @@ public class Item : MonoBehaviour
         mainCamera = Camera.main;
         if (placed)
         {
+            Light.enabled = false;
             colider.isTrigger = true;
             spriteRenderer.enabled = false;
             rb.bodyType = RigidbodyType2D.Static;
         }
         MatchParentSize();
-        
+        Light.color = Color.HSVToRGB(Random.Range(0f, 1f), Random.Range(0f, 0.5f), 1f);
     }
     
     void OnDrawGizmos()

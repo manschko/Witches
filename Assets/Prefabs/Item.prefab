@@ -159,7 +159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5373c3378e5614a21b66d00c262240a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deleteState: 0
   Name: Test
   DisplaySprite: {fileID: -6182383596632484212, guid: fb20a979a07e445e1bd99ce254582f6d, type: 3}
   snapThresholdScale: 2
@@ -174,6 +173,7 @@ MonoBehaviour:
     Path: event:/SFX/Placement
   placed: 0
   dragged: 0
+  Light: {fileID: 8219520821619096841}
   damping: 1
   frequency: 5
   debug: 1
