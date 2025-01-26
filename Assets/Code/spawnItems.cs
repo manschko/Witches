@@ -14,9 +14,8 @@ public class spawnItems : MonoBehaviour
         for (int i = 0; i < itemCount; i++)
         {
             Vector3 position = new Vector3(transform.position.x - scale.x / 2 + sectionsSize * i + sectionsSize / 2, transform.position.y + yOffset, transform.position.z);
-            GameObject newItem = Instantiate(item.gameObject, position, Quaternion.identity);
-            
-            
+            Instantiate(item.gameObject, position, Quaternion.identity);
+
         }
     }
 
