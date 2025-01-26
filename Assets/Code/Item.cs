@@ -43,10 +43,12 @@ public class Item : MonoBehaviour
         if (placed)
         {
             Light.enabled = false;
-            colider.isTrigger = true;
             spriteRenderer.enabled = false;
             rb.bodyType = RigidbodyType2D.Static;
+        }else{
+            colider.isTrigger = false;
         }
+        
         MatchParentSize();
         Light.color = Color.HSVToRGB(Random.Range(0f, 1f), Random.Range(0f, 0.5f), 1f);
     }

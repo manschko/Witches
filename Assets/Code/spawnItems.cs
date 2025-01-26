@@ -13,7 +13,7 @@ public class spawnItems : MonoBehaviour
         item.placed = true;
         for (int i = 0; i < itemCount; i++)
         {
-            Vector3 position = new Vector3(transform.position.x - scale.x / 2 + sectionsSize * i + sectionsSize / 2, transform.position.y + yOffset, transform.position.z);
+            Vector3 position = new Vector3(transform.position.x - (scale.x / 2) + (sectionsSize * i)+ (sectionsSize / 2), transform.position.y + yOffset, transform.position.z);
             Instantiate(item.gameObject, position, Quaternion.identity);
 
         }
