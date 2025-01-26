@@ -36,12 +36,21 @@ public class Item : MonoBehaviour
         mainCamera = Camera.main;
         if (placed)
         {
-            colider.radius *= snapThresholdScale;
             colider.isTrigger = true;
             spriteRenderer.enabled = false;
             rb.bodyType = RigidbodyType2D.Static;
         }
         MatchParentSize();
+        
+    }
+    
+    void OnDrawGizmos()
+    {
+        if (debug)
+        {
+            Gizmos.color = debugColor;
+            Gizmos.DrawWireCube(colider.transform.position, colider.transform.localScale);
+        }
     }
 
     [Range(0.0f, 100.0f)] public float damping = 1.0f;
@@ -60,8 +69,9 @@ public class Item : MonoBehaviour
         }
         if(snapObject){
             rb.bodyType = RigidbodyType2D.Dynamic;
+            colider.isTrigger = false;
             snapObject.SetActive(true);
-
+            spriteRenderer.sortingOrder = 10;
         }
         dragged = true;
         Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
@@ -90,6 +100,8 @@ public class Item : MonoBehaviour
             transform.position = snapObject.transform.position;
             transform.rotation = snapObject.transform.rotation; 
             rb.bodyType = RigidbodyType2D.Static;
+            colider.isTrigger = true;
+            spriteRenderer.sortingOrder = 9;
             spriteRenderer.enabled = true;
             snapObject.SetActive(false);
 
@@ -104,27 +116,40 @@ public class Item : MonoBehaviour
         {
             return;
         }
-
         var worldPos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        joint.target = worldPos;
-
-
-        if (debug)
-            Debug.DrawLine(joint.transform.TransformPoint(joint.anchor), worldPos, debugColor);
+        if (trigger)
+        {
+            transform.position = new Vector3(worldPos.x , worldPos.y, transform.position.z);
+        }
+        else
+        {
+            
+            joint.target = worldPos;
+            if (debug)
+                Debug.DrawLine(joint.transform.TransformPoint(joint.anchor), worldPos, debugColor);
+        }
+       
     }
 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         //Vermeiden von trigger whenn nich dragged und vom plazierten Object
-        if (placed || !dragged)
+        if (placed || !dragged || other.CompareTag("PotHole"))
         {
             return;
         }
-        if(trigger){
+        if (!other.GetComponent<Item>().placed)
+        {
+            return;
+        }
+        if(trigger)
+        {
+                
             trigger.GetComponent<Item>().spriteRenderer.enabled = false;
         }
         trigger = other;
+        colider.radius = (size.x/2) - 0.1f;
         SpriteRenderer otherSpriteRenderer = other.GetComponent<Item>().spriteRenderer;
         otherSpriteRenderer.sprite = DisplaySprite;
         otherSpriteRenderer.transform.localScale = spriteRenderer.transform.localScale;
@@ -149,6 +174,8 @@ public class Item : MonoBehaviour
         other.GetComponent<Item>().spriteRenderer.enabled = false;
         spriteRenderer.enabled = true; 
         snapObject = null;
+        colider.radius = size.x/2;
+        trigger = null;
     }
 
     void MatchParentSize()
@@ -161,6 +188,6 @@ public class Item : MonoBehaviour
             (parentSize.y / spriteRenderer.sprite.bounds.size.y),
             1f
         );
-        colider.radius = size.x/2;
+        colider.radius = size.x / 2;
     }
 }

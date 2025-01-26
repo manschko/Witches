@@ -101,6 +101,7 @@ public class Bubble : MonoBehaviour
     public void Pop(bool silent)
     {
         OnPopped.Invoke();
+        ItemRenderer.enabled = false;
         Destroy(gameObject, 1f);
         OnPopped.RemoveAllListeners();
         _isPopped = true;
