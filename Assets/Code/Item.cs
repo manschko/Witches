@@ -68,8 +68,9 @@ public class Item : MonoBehaviour
         }
         if(snapObject){
             rb.bodyType = RigidbodyType2D.Dynamic;
+            colider.isTrigger = false;
             snapObject.SetActive(true);
-
+            spriteRenderer.sortingOrder = 10;
         }
         dragged = true;
         Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
@@ -98,6 +99,8 @@ public class Item : MonoBehaviour
             transform.position = snapObject.transform.position;
             transform.rotation = snapObject.transform.rotation; 
             rb.bodyType = RigidbodyType2D.Static;
+            colider.isTrigger = true;
+            spriteRenderer.sortingOrder = 9;
             spriteRenderer.enabled = true;
             snapObject.SetActive(false);
             
@@ -130,11 +133,17 @@ public class Item : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         //Vermeiden von trigger whenn nich dragged und vom plazierten Object
-        if (placed || !dragged || other.CompareTag("PotHole") )
+        if (placed || !dragged || other.CompareTag("PotHole"))
         {
             return;
         }
-        if(trigger){
+        if (!other.GetComponent<Item>().placed)
+        {
+            return;
+        }
+        if(trigger)
+        {
+                
             trigger.GetComponent<Item>().spriteRenderer.enabled = false;
         }
         trigger = other;
