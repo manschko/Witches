@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: Assets/Audio/GGJ25-Witches/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638734347017838259
+  lastModified: 638734349382788079
   FileSizes:
   - Name: Desktop
-    Value: 1662336
+    Value: 1662400
   Exists: 1
 --- !u!114 &-6312028704834981189
 MonoBehaviour:
@@ -62,10 +62,10 @@ MonoBehaviour:
   Path: Assets/Audio/GGJ25-Witches/Build/Desktop/MUSIC.bank
   Name: MUSIC
   StudioPath: bank:/MUSIC
-  lastModified: 638734347017269332
+  lastModified: 638734349369246816
   FileSizes:
   - Name: Desktop
-    Value: 2973792
+    Value: 2973824
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -93,7 +93,7 @@ MonoBehaviour:
   - {fileID: 2809644394540781538}
   StringsBanks:
   - {fileID: 3460045639221689681}
-  cacheTime: 638734347017838259
+  cacheTime: 638734349382788079
   cacheVersion: 131622
 --- !u!114 &2809644394540781538
 MonoBehaviour:
@@ -110,7 +110,7 @@ MonoBehaviour:
   Path: Assets/Audio/GGJ25-Witches/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638734296433364416
+  lastModified: 638734349368707500
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -130,7 +130,7 @@ MonoBehaviour:
   Path: Assets/Audio/GGJ25-Witches/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638734347016740349
+  lastModified: 638734349368717606
   FileSizes:
   - Name: Desktop
     Value: 964
@@ -184,7 +184,7 @@ MonoBehaviour:
   - {fileID: -7877615413418486573}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20

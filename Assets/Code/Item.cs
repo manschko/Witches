@@ -12,6 +12,7 @@ public class Item : MonoBehaviour
 
     public Vector3 size = new Vector3(10,10,0);
     public SpriteRenderer spriteRenderer;
+    public FMODUnity.EventReference DropEvent;
 
 
     private Rigidbody2D rb;
@@ -91,7 +92,8 @@ public class Item : MonoBehaviour
             rb.bodyType = RigidbodyType2D.Static;
             spriteRenderer.enabled = true;
             snapObject.SetActive(false);
-            
+
+            FMODUnity.RuntimeManager.PlayOneShot(DropEvent, transform.position);
         }
         
     }
