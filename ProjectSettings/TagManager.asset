@@ -42,5 +42,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: ItemInPot
+    uniqueID: 424121661
+    locked: 0
+  - name: PotFront
+    uniqueID: 838724959
+    locked: 0
+  - name: PotItems
+    uniqueID: 2631922609
+    locked: 0
+  - name: FrontEffcts
+    uniqueID: 114153773
+    locked: 0
   m_RenderingLayers:
   - Default
